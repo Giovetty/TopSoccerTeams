@@ -25,7 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         teams[0] = " Real Madrid"
         var teamsDisplay = ""
-        teamsDisplay += "${teams[0]}\n"
+         var Count = 0
+        while (Count < teams.count()) {
+            teamsDisplay += "${teams[Count]}\n"
+            Count++
+
+        }
+
+
 
         teamsTxt.text = Arrays.toString(teams)
 

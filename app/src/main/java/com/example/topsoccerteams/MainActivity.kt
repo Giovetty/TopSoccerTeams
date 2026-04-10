@@ -14,8 +14,8 @@ fun  LogArrValues(array: Array<String>,limit: Int = 0){
     if (limit == 0 ) {
         Log.v( "Array Values", Arrays.toString(array))
     }else {
-        Log.v ("Array Values", Arrays.toString(
-            array.sliceArray(0..limit -1)))
+        Log.v ("Array Values", array.sliceArray
+            (0..limit - 1).contentToString())
     }
     Log.v("Array values: ", Arrays.toString(array))
 }

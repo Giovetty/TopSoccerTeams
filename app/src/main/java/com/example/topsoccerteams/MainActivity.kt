@@ -19,6 +19,7 @@ import java.util.Arrays
 //    }
 //    Log.v("Array values: ", Arrays.toString(array))
 //}
+
 // Created function to find the shortest element in the array
 
 fun getShortestString(array: Array<String>): String {

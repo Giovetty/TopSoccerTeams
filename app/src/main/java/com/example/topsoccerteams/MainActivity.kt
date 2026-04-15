@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
-
+//logs the content of an array of strings
 fun  LogArrValues(array: Array<String>,limit: Int = 0){
     if (limit == 0 ) {
         Log.v( "Array Values", Arrays.toString(array))
@@ -19,10 +19,12 @@ fun  LogArrValues(array: Array<String>,limit: Int = 0){
     }
     Log.v("Array values: ", Arrays.toString(array))
 }
+
+
 class MainActivity : AppCompatActivity() {
 
    val teams =  arrayOf<String> ("Man Sundowns FC","Orlando Pirates","Sex United FC",
-       "Stellenbosh FC","Sivest Wits")
+       "Cape Town City FC","Bidvest Wits FC")
 
 //   val names = arrayOf<String>("name1", "name2", "name3")
 
@@ -31,25 +33,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
+// added teams text view
         val teamsTxt = findViewById<TextView>(R.id.TeamsView)
         var teamsDisplay = ""
         var Count = 0
 
         teams[0] = " Real Madrid"
-
+// call the method to log to array values
         LogArrValues(teams)
         LogArrValues(teams,3)
 
-//        LogArrValues(names)
+        //Added loop to all teams to the display string
 
-
-
-//        while (Count < teams.count()) {
-//            teamsDisplay += "${teams[Count]}\n"
-//            Count++
-//
-//          }
         for (team in teams){
             teamsDisplay += "${teams}\n"
         }
